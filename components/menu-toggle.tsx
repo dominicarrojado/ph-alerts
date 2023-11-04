@@ -74,7 +74,7 @@ export default function MenuToggle() {
             <div className="flex flex-col space-y-3 pt-6">
               <h4 className="font-medium">Other Alerts</h4>
               <nav className="flex gap-2 items-center">
-                <a href={SG_ALERTS_URL} target="_blank">
+                <a href={SG_ALERTS_URL}>
                   <span className="mr-1">🇸🇬</span> SG Alerts
                 </a>
               </nav>
