@@ -32,7 +32,7 @@ export default function SubscribeForm() {
   const submitBtnText = "Subscribe Now";
   const [fetchStatus, submitSubscribeRequest] = useSubmitSubscribeRequest();
   const [topics, setTopics] = useState<SubscriptionTopics>([
-    SubscriptionTopic.FeaturesSgAlerts,
+    SubscriptionTopic.FeaturesPhAlerts,
   ]);
   const [email, setEmail] = useState("");
   const isFormValid =

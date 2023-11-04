@@ -6,13 +6,13 @@ import { Button } from "@/components/ui/button";
 import Heading from "@/components/ui/heading";
 import Subheading from "@/components/ui/subheading";
 import Paragraph from "@/components/ui/paragraph";
-import { FlightAirline, Routes } from "@/lib/enums";
+import { Currency, FlightAirline, Routes } from "@/lib/enums";
 import { META_OPEN_GRAPH, META_TWITTER } from "@/app/shared-metadata";
 import { FlightsTable } from "@/components/flights-table";
 
 const title = "Jetstar Flights";
 const description =
-  "Subscribe to SG Alerts to get notified when flight prices goes down for Jetstar flights departing from Singapore.";
+  "Subscribe to PH Alerts to get notified when flight prices goes down for Jetstar flights departing from the Philippines.";
 const url = Routes.JetstarFlights;
 
 export const metadata: Metadata = {
@@ -41,7 +41,12 @@ export default function JetstarFlights() {
         <Heading>{title}</Heading>
         <Subheading>{description}</Subheading>
       </div>
-      <FlightsTable airline={FlightAirline.JETSTAR} pricesLabel="Prices From" />
+      <FlightsTable
+        airline={FlightAirline.JETSTAR}
+        pricesLabel="Prices From"
+        currency={Currency.PHP}
+        usePercentDiff={false}
+      />
       <Paragraph>
         <span className="font-medium">Jetstar (3K)</span> is one of the most
         popular low-cost airlines in the world. It offers cheap flights to many
@@ -50,15 +55,15 @@ export default function JetstarFlights() {
         Pacific region.
       </Paragraph>
       <Paragraph>
-        Fare deals offered by Jetstar are highly sought after by Singapore
+        Fare deals offered by Jetstar are highly sought after by Philippine
         residents. However, the prices are constantly changing and it can be
         difficult to keep up when the prices go down. While there are many
         flight deal websites out there, nothing beats booking directly with the
         airline itself.
       </Paragraph>
       <Paragraph>
-        <span className="font-medium">SG Alerts</span> is a free notification
-        service that monitors the Jetstar flight promotions from Singapore. We
+        <span className="font-medium">PH Alerts</span> is a free notification
+        service that monitors the Jetstar flight promotions from Philippine. We
         will notify you when the prices go down so that you can take advantage
         of the lower prices.
       </Paragraph>

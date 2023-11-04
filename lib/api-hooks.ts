@@ -26,6 +26,7 @@ export function useSubmitSubscribeRequest() {
         topics,
         contact: email,
         contactMode: "email",
+        notificationService: "ph-alerts",
       });
 
       setFetchStatus(FetchStatus.Success);

@@ -32,9 +32,9 @@ export const metadata: Metadata = {
   description: MAIN_DESCRIPTION,
   keywords: [
     "Alerts",
-    "Singapore Alerts",
+    "Philippine Alerts",
     "Notification Service",
-    "Singapore Notification Service",
+    "Philippine Notification Service",
     "Email Alerts",
     "Email Notifications",
     "Email Subscription",

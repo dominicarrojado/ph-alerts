@@ -10,7 +10,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { PH_ALERTS_URL } from "@/lib/constants";
+import { SG_ALERTS_URL } from "@/lib/constants";
 
 export default function RegionToggle() {
   return (
@@ -22,9 +22,9 @@ export default function RegionToggle() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
-        <DropdownMenuItem>🇸🇬 SG Alerts</DropdownMenuItem>
+        <DropdownMenuItem>🇵🇭 PH Alerts</DropdownMenuItem>
         <DropdownMenuItem>
-          <a href={PH_ALERTS_URL}>🇵🇭 PH Alerts</a>
+          <a href={SG_ALERTS_URL}>🇸🇬 SG Alerts</a>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

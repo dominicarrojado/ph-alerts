@@ -34,7 +34,7 @@ export default function Header() {
               <HeaderLogo pathname={pathname} />
             </PageHeaderHeading>
             <PageHeaderDescription>
-              Subscribe to all things Singapore. <br />
+              Subscribe to all things Philippines. <br />
               Save time. Stay updated.
             </PageHeaderDescription>
           </PageHeader>

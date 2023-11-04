@@ -4,12 +4,8 @@ export enum Routes {
   Settings = "/settings/",
   About = "/about/",
   HowItWorks = "/how-it-works/",
-  JapanVisa = "/topics/japan-visa-appointment-slots/",
-  FixedDepositRates = "/topics/fixed-deposit-rates/",
-  SingaporeAirlinesFlights = "/topics/singapore-airlines-flights/",
-  JetstarFlights = "/topics/jetstar-flights/",
   CebuPacificFlights = "/topics/cebu-pacific-flights/",
-  CoeBiddingResults = "/topics/coe-bidding-results/",
+  JetstarFlights = "/topics/jetstar-flights/",
 }
 
 export enum FetchStatus {
@@ -32,34 +28,12 @@ export enum ApiEndpoint {
 }
 
 export enum SubscriptionTopic {
-  JapanVisa = "japan-visa",
-  CdcEyesightTest = "cdc-eyesight-test",
-  CdcCounterServices = "cdc-counter-services",
-  SsdcEnrolmentWeekend = "ssdc-enrolment-weekend",
-  SsdcSelfStudyWeekend = "ssdc-self-study-weekend",
-  SsdcOtherPurposes = "ssdc-other-purposes",
-  BbdcCounterServices = "bbdc-counter-services",
-  DepositRates = "deposit-rates",
-  EventsBloodDrive = "events-blood-drive",
-  FlightsSingaporeAirlines = "flights-singapore-airlines",
-  FlightsJetstar = "flights-jetstar",
   FlightsCebuPacific = "flights-cebu-pacific",
-  MoviesGv = "movies-gv",
-  MoviesShaw = "movies-shaw",
-  MoviesCathayCineplexes = "movies-cathay-cineplexes",
-  MoviesTheProjector = "movies-the-projector",
-  RestaurantsBurntEnds = "restaurants-burnt-ends",
-  TravelDealsTripCom = "travel-deals-trip.com",
-  TravelDealsTraveloka = "travel-deals-traveloka",
+  FlightsJetstarPh = "flights-jetstar-ph",
+  TravelDealsTripComPh = "travel-deals-trip.com-ph",
+  TravelDealsTravelokaPh = "travel-deals-traveloka-ph",
   TravelDealsPhilippineAirlines = "travel-deals-philippine-airlines",
-  FacilitiesOthBadmintonCourt = "facilities-oth-badminton-court",
-  CoeBiddings = "coe-biddings",
-  FeaturesSgAlerts = "features-sg-alerts",
-}
-
-export enum ExternalUrl {
-  JapanVisa = "https://www.sg.emb-japan.go.jp/itpr_en/visit.html",
-  OneMotoring = "https://onemotoring.lta.gov.sg/content/onemotoring/home/buying/coe-open-bidding.html",
+  FeaturesPhAlerts = "features-ph-alerts",
 }
 
 export enum GoogleAnalyticsEvent {
@@ -68,9 +42,8 @@ export enum GoogleAnalyticsEvent {
 }
 
 export enum FlightAirline {
-  SINGAPORE_AIRLINES = "singapore-airlines",
-  JETSTAR = "jetstar",
   CEBU_PACIFIC = "cebu-pacific",
+  JETSTAR = "jetstar-ph",
 }
 
 export enum Currency {

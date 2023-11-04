@@ -13,10 +13,10 @@ type Props = {
 export default function HeaderLogo({ pathname, flagClassName }: Props) {
   const children = (
     <>
-      <span className={cn("mr-2 md:mr-4", flagClassName)}>🇸🇬</span>
+      <span className={cn("mr-2 md:mr-4", flagClassName)}>🇵🇭</span>
       <span className="group-hover:underline">
-        <abbr title="Singapore" className="no-underline">
-          SG
+        <abbr title="Philippines" className="no-underline">
+          PH
         </abbr>{" "}
         Alerts
       </span>

@@ -30,9 +30,9 @@ export default function MenuToggle() {
       <SheetContent>
         <SheetHeader>
           <SheetTitle>
-            <span className="mr-2">🇸🇬</span>
-            <abbr title="Singapore" className="no-underline">
-              SG
+            <span className="mr-2">🇵🇭</span>
+            <abbr title="Philippine" className="no-underline">
+              PH
             </abbr>{" "}
             Alerts
           </SheetTitle>

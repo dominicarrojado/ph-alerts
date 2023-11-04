@@ -6,7 +6,7 @@ import Authenticated from "./authenticated";
 import { META_OPEN_GRAPH, META_TWITTER } from "../shared-metadata";
 
 const title = "Settings";
-const description = "Manage your subscription settings for SG Alerts.";
+const description = "Manage your subscription settings for PH Alerts.";
 const url = Routes.Settings;
 
 export const metadata: Metadata = {
