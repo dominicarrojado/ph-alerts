@@ -17,6 +17,8 @@ export const MAIN_PATH = "/sg-alerts/";
 export const MAIN_URL = `${MAIN_ORIGIN}${MAIN_PATH}`;
 export const MAIN_IMAGE = `${MAIN_ORIGIN}/images/og-image.png`;
 
+export const PH_ALERTS_URL = `${MAIN_ORIGIN}/ph-alerts/`;
+
 export const ROUTES_WITH_NO_TITLE = [
   Routes.Home,
   Routes.Subscribe,
