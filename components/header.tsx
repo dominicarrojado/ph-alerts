@@ -9,7 +9,6 @@ import {
   PageHeaderHeading,
 } from "./page-header";
 import HeaderLogo from "./header-logo";
-import RegionToggle from "./region-toggle";
 import ModeToggle from "./mode-toggle";
 import MenuToggle from "./menu-toggle";
 import { cn } from "@/lib/utils";
@@ -43,15 +42,9 @@ export default function Header() {
             <HeaderLogo pathname={pathname} flagClassName="mr-2 md:mr-2" />
           </div>
         )}
-        <div
-          className={cn(
-            "flex gap-2 shrink-0",
-            useLogoTitle ? "flex-col sm:flex-row-reverse" : "flex-row-reverse"
-          )}
-        >
-          <MenuToggle />
+        <div className="flex gap-2 shrink-0">
           <ModeToggle />
-          {false && <RegionToggle />}
+          <MenuToggle />
         </div>
       </div>
     </Container>

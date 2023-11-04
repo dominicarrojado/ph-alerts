@@ -29,7 +29,7 @@ export const TOPICS_MENU_ITEMS = [
     href: Routes.JetstarFlights,
   },
   {
-    title: "Travel Deals",
+    title: "and more...",
     href: "",
   },
 ];

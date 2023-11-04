@@ -14,6 +14,7 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Badge } from "@/components/ui/badge";
 import { MAIN_MENU_ITEMS, TOPICS_MENU_ITEMS } from "@/lib/content";
+import { SG_ALERTS_URL } from "@/lib/constants";
 
 export default function MenuToggle() {
   const [isOpen, setIsOpen] = useState(false);
@@ -67,6 +68,16 @@ export default function MenuToggle() {
                   )}
                 </nav>
               ))}
+            </div>
+          </div>
+          <div className="flex flex-col space-y-2">
+            <div className="flex flex-col space-y-3 pt-6">
+              <h4 className="font-medium">Other Alerts</h4>
+              <nav className="flex gap-2 items-center">
+                <a href={SG_ALERTS_URL} target="_blank">
+                  <span className="mr-1">🇸🇬</span> SG Alerts
+                </a>
+              </nav>
             </div>
           </div>
         </ScrollArea>
