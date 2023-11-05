@@ -9,7 +9,7 @@ import {
   SubscriptionTopics,
 } from "./types";
 import { ApiEndpoint, FetchStatus, FlightAirline } from "./enums";
-import { API_URL } from "./constants";
+import { API_URL, SERVICE_NAME } from "./constants";
 
 export function useSubmitSubscribeRequest() {
   const [fetchStatus, setFetchStatus] = useState(FetchStatus.Idle);
@@ -26,7 +26,7 @@ export function useSubmitSubscribeRequest() {
         topics,
         contact: email,
         contactMode: "email",
-        notificationService: "ph-alerts",
+        notificationService: SERVICE_NAME,
       });
 
       setFetchStatus(FetchStatus.Success);
@@ -80,6 +80,7 @@ export function useSendSubscriptionLink() {
 
       await axios.post(`${API_URL}${ApiEndpoint.SubscriptionLinkEmail}`, {
         email,
+        notificationService: SERVICE_NAME,
       });
 
       setFetchStatus(FetchStatus.Success);

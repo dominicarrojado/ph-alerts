@@ -9,6 +9,7 @@ export const OWNER_DONATION_LINK =
 export const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export const SITE_NAME = "PH Alerts";
+export const SERVICE_NAME = "ph-alerts";
 export const MAIN_TITLE = `${SITE_NAME} | ${OWNER_NAME}`;
 export const MAIN_DESCRIPTION =
   "Subscribe to all things Philippines. Save time. Stay updated.";
