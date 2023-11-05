@@ -55,17 +55,17 @@ export default function JetstarFlights() {
         Pacific region.
       </Paragraph>
       <Paragraph>
-        Fare deals offered by Jetstar are highly sought after by Philippine
-        residents. However, the prices are constantly changing and it can be
-        difficult to keep up when the prices go down. While there are many
-        flight deal websites out there, nothing beats booking directly with the
-        airline itself.
+        Fare deals offered by Jetstar are highly sought after by Filipinos.
+        However, the prices are constantly changing and it can be difficult to
+        keep up when the prices go down. While there are many flight deal
+        websites out there, nothing beats booking directly with the airline
+        itself.
       </Paragraph>
       <Paragraph>
         <span className="font-medium">PH Alerts</span> is a free notification
-        service that monitors the Jetstar flight promotions from Philippine. We
-        will notify you when the prices go down so that you can take advantage
-        of the lower prices.
+        service that monitors the Jetstar flight promotions from the
+        Philippines. We will notify you when the prices go down so that you can
+        take advantage of the lower prices.
       </Paragraph>
       <Paragraph>
         To get started, simply click the button below to head over to the

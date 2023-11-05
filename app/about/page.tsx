@@ -67,9 +67,9 @@ export default function About() {
       <Paragraph>
         After seeing how useful it was, I decided to create{" "}
         <span className="font-medium">PH Alerts</span> to expand the service to
-        other topics that are relevant to Philippine residents such as flight
-        prices, travel deals, and many more. I&apos;m always looking for new
-        topics or alerts to add to the service, so feel free to send me an{" "}
+        other topics that are relevant to Filipinos such as flight prices,
+        travel deals, and many more. I&apos;m always looking for new topics or
+        alerts to add to the service, so feel free to send me an{" "}
         <Anchor href={`mailto:${OWNER_EMAIL}`}>email</Anchor> if you have any
         suggestions or feedback.
       </Paragraph>

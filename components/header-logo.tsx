@@ -15,7 +15,7 @@ export default function HeaderLogo({ pathname, flagClassName }: Props) {
     <>
       <span className={cn("mr-2 md:mr-4", flagClassName)}>🇵🇭</span>
       <span className="group-hover:underline">
-        <abbr title="Philippines" className="no-underline">
+        <abbr title="Philippine" className="no-underline">
           PH
         </abbr>{" "}
         Alerts
