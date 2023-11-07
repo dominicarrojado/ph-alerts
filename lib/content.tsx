@@ -107,6 +107,20 @@ export const NOTIFICATION_SETTINGS: NotificationSettings = [
     ),
   },
   {
+    id: SubscriptionTopic.PrcResults,
+    title: "📄 Licensure Examination Results (PRC)",
+    description: (
+      <>
+        Receive email notifications when there are new licensure examination
+        results from{" "}
+        <Anchor href="https://www.prc.gov.ph/" isExternal>
+          Professional Regulation Commission
+        </Anchor>
+        .
+      </>
+    ),
+  },
+  {
     id: SubscriptionTopic.FeaturesPhAlerts,
     title: "🚀 New Features & Alerts",
     description: (

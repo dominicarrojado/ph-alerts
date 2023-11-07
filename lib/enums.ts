@@ -33,6 +33,7 @@ export enum SubscriptionTopic {
   TravelDealsTripComPh = "travel-deals-trip.com-ph",
   TravelDealsTravelokaPh = "travel-deals-traveloka-ph",
   TravelDealsPhilippineAirlines = "travel-deals-philippine-airlines",
+  PrcResults = "prc-results",
   FeaturesPhAlerts = "features-ph-alerts",
 }
 
