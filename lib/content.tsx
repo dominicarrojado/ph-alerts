@@ -3,6 +3,7 @@ import { Anchor } from "@/components/ui/anchor";
 import { NotificationSettings } from "./types";
 import { Routes, SubscriptionTopic } from "./enums";
 import { OWNER_EMAIL } from "./constants";
+import Link from "next/link";
 
 export const MAIN_MENU_ITEMS = [
   {
@@ -41,12 +42,9 @@ export const NOTIFICATION_SETTINGS: NotificationSettings = [
     description: (
       <>
         Receive email notifications when the flight prices goes down for{" "}
-        <Anchor
-          href="https://www.cebupacificair.com/en-PH/seat-sale"
-          isExternal
-        >
-          Cebu Pacific flights
-        </Anchor>{" "}
+        <Link href={Routes.CebuPacificFlights} passHref legacyBehavior>
+          <Anchor>Cebu Pacific flights</Anchor>
+        </Link>{" "}
         departing from the Philippines.
       </>
     ),
@@ -57,9 +55,9 @@ export const NOTIFICATION_SETTINGS: NotificationSettings = [
     description: (
       <>
         Receive email notifications when the flight prices goes down for{" "}
-        <Anchor href="https://www.jetstar.com/ph/en/deals" isExternal>
-          Jetstar flights
-        </Anchor>{" "}
+        <Link href={Routes.JetstarFlights} passHref legacyBehavior>
+          <Anchor>Jetstar flights</Anchor>
+        </Link>{" "}
         departing from the Philippines.
       </>
     ),

@@ -9,6 +9,7 @@ import Paragraph from "@/components/ui/paragraph";
 import { Currency, FlightAirline, Routes } from "@/lib/enums";
 import { META_OPEN_GRAPH, META_TWITTER } from "@/app/shared-metadata";
 import { FlightsTable } from "@/components/flights-table";
+import { Anchor } from "@/components/ui/anchor";
 
 const title = "Cebu Pacific Flights";
 const description =
@@ -56,9 +57,15 @@ export default function CebuPacificFlights() {
         China, Japan, Singapore and the United Arab Emirates.
       </Paragraph>
       <Paragraph>
-        Fare deals offered by Cebu Pacific are highly sought after by Filipinos.
-        One of the most popular promotions is the Piso Sale, where you can book
-        flights with base fares as low as 1 peso.
+        <Anchor
+          href="https://www.cebupacificair.com/en-PH/seat-sale"
+          isExternal
+        >
+          Fare deals offered by Cebu Pacific
+        </Anchor>{" "}
+        are highly sought after by Filipinos. One of the most popular promotions
+        is the Piso Sale, where you can book flights with base fares as low as 1
+        peso.
       </Paragraph>
       <Paragraph>
         <span className="font-medium">PH Alerts</span> is a free notification
