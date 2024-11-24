@@ -39,9 +39,9 @@ export default function SettingsForm({ subscription }: Props) {
   const hasTopics = useMemo(
     () =>
       topics.some((topicId) =>
-        NOTIFICATION_SETTINGS.find((setting) => setting.id === topicId)
+        NOTIFICATION_SETTINGS.find((setting) => setting.id === topicId),
       ),
-    [topics]
+    [topics],
   );
   const [isFormTouched, setIsFormTouched] = useState(false);
   const isLoading = fetchStatus === FetchStatus.Loading;
@@ -116,7 +116,7 @@ export default function SettingsForm({ subscription }: Props) {
                 />
               </Label>
             ))}
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm font-light text-muted-foreground">
               By submitting this form, you agree to receive email notifications
               about the services above and understand that you can unsubscribe
               at any time.

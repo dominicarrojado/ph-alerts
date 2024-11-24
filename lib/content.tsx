@@ -1,9 +1,7 @@
-import { Fragment } from "react";
 import { Anchor } from "@/components/ui/anchor";
 import { NotificationSettings } from "./types";
 import { Routes, SubscriptionTopic } from "./enums";
 import { OWNER_EMAIL } from "./constants";
-import Link from "next/link";
 
 export const MAIN_MENU_ITEMS = [
   {
@@ -42,12 +40,11 @@ export const NOTIFICATION_SETTINGS: NotificationSettings = [
     description: (
       <>
         Receive email notifications when the flight prices goes down for{" "}
-        <Link href={Routes.CebuPacificFlights} passHref legacyBehavior>
-          <Anchor>Cebu Pacific flights</Anchor>
-        </Link>{" "}
-        departing from the Philippines.
+        <strong className="font-medium">Cebu Pacific flights</strong> departing
+        from the Philippines.
       </>
     ),
+    topicRoute: Routes.CebuPacificFlights,
   },
   {
     id: SubscriptionTopic.FlightsJetstarPh,
@@ -55,12 +52,11 @@ export const NOTIFICATION_SETTINGS: NotificationSettings = [
     description: (
       <>
         Receive email notifications when the flight prices goes down for{" "}
-        <Link href={Routes.JetstarFlights} passHref legacyBehavior>
-          <Anchor>Jetstar flights</Anchor>
-        </Link>{" "}
-        departing from the Philippines.
+        <strong className="font-medium">Jetstar flights</strong> departing from
+        the Philippines.
       </>
     ),
+    topicRoute: Routes.JetstarFlights,
   },
   {
     id: SubscriptionTopic.TravelDealsTripComPh,

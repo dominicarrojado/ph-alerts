@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { GoogleAnalyticsEvent, SubscriptionTopic } from "./enums";
+import { GoogleAnalyticsEvent, Routes, SubscriptionTopic } from "./enums";
 
 export type SubscriptionTopics = Array<SubscriptionTopic>;
 export type Subscription = {
@@ -13,6 +13,7 @@ export type NotificationSetting = {
   id: SubscriptionTopic;
   title: string;
   description: ReactNode;
+  topicRoute?: Routes;
 };
 export type NotificationSettings = Array<NotificationSetting>;
 
