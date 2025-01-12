@@ -4,6 +4,7 @@ import { formatDateTime } from "./date";
 import {
   CoeBiddingsInfo,
   DepositRatesInfo,
+  Flights,
   FlightsInfo,
   Subscription,
   SubscriptionTopics,
@@ -15,7 +16,7 @@ export function useSubmitSubscribeRequest() {
   const [fetchStatus, setFetchStatus] = useState(FetchStatus.Idle);
   const submitSubscribeRequest = async (
     email: string,
-    topics: SubscriptionTopics
+    topics: SubscriptionTopics,
   ) => {
     try {
       setFetchStatus(FetchStatus.Loading);
@@ -131,7 +132,7 @@ export function useUpdateSubscription() {
   const searchParams = useSearchParams();
   const [fetchStatus, setFetchStatus] = useState(FetchStatus.Idle);
   const updateSubscription = async (
-    topics: SubscriptionTopics
+    topics: SubscriptionTopics,
   ): Promise<boolean> => {
     try {
       const id = searchParams.get("id") as string;
@@ -171,7 +172,7 @@ export function useGetJapanVisaSlotsDate() {
 
       const axios = (await import("axios")).default;
       const res = await axios.get(
-        `${API_URL}${ApiEndpoint.JapanVisaLastSlotsInfo}`
+        `${API_URL}${ApiEndpoint.JapanVisaLastSlotsInfo}`,
       );
       const resData = res.data;
 
@@ -201,7 +202,7 @@ export function useGetDepositRatesInfo() {
 
       const axios = (await import("axios")).default;
       const res = await axios.get(
-        `${API_URL}${ApiEndpoint.FixedDepositRatesInfo}`
+        `${API_URL}${ApiEndpoint.FixedDepositRatesInfo}`,
       );
       const resData = res.data;
 
@@ -234,7 +235,7 @@ export function useGetFlightsInfo(airline: FlightAirline) {
 
       const axios = (await import("axios")).default;
       const res = await axios.get(
-        `${API_URL}${ApiEndpoint.FlightsInfo}?airline=${airline}`
+        `${API_URL}${ApiEndpoint.FlightsInfo}?airline=${airline}`,
       );
       const resData = res.data;
 
@@ -243,7 +244,9 @@ export function useGetFlightsInfo(airline: FlightAirline) {
       }
 
       setFlightsInfo({
-        ...resData,
+        items: (resData.items as Flights).filter(
+          (item) => !item.isNoLongerAvailable,
+        ),
         updatedAt: formatDateTime(resData.updatedAt),
       });
       setFetchStatus(FetchStatus.Success);
