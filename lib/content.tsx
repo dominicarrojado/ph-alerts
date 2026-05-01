@@ -24,10 +24,6 @@ export const TOPICS_MENU_ITEMS = [
     href: Routes.CebuPacificFlights,
   },
   {
-    title: "Jetstar Flights",
-    href: Routes.JetstarFlights,
-  },
-  {
     title: "and more...",
     href: "",
   },
@@ -45,18 +41,6 @@ export const NOTIFICATION_SETTINGS: NotificationSettings = [
       </>
     ),
     topicRoute: Routes.CebuPacificFlights,
-  },
-  {
-    id: SubscriptionTopic.FlightsJetstarPh,
-    title: "✈️ Flight Prices (Jetstar)",
-    description: (
-      <>
-        Receive email notifications when the flight prices goes down for{" "}
-        <strong className="font-medium">Jetstar flights</strong> departing from
-        the Philippines.
-      </>
-    ),
-    topicRoute: Routes.JetstarFlights,
   },
   {
     id: SubscriptionTopic.TravelDealsTripComPh,
