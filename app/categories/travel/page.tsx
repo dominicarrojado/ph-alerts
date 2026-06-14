@@ -13,9 +13,9 @@ import {
   TRAVEL_TELEGRAM_CHANNELS,
 } from "@/lib/content";
 
-const title = "Travel in Philippines";
+const title = "Travel in the Philippines";
 const description =
-  "Subscribe to get notified on topics related to travel in Philippines such as flight prices and travel deals.";
+  "Subscribe to get notified on topics related to travel in the Philippines such as flight prices and travel deals.";
 const url = Routes.TravelCategory;
 
 export const metadata: Metadata = {

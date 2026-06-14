@@ -52,7 +52,7 @@ export default function MenuToggle() {
               {TOPICS_MENU_ITEMS.map(({ title, href }, index) => (
                 <nav
                   key={index}
-                  className="flex gap-2 items-center text-muted-foreground"
+                  className="flex items-center gap-2 text-muted-foreground"
                 >
                   {href ? (
                     <Link key={href} href={href} onClick={closeSheet}>
@@ -73,7 +73,7 @@ export default function MenuToggle() {
           <div className="flex flex-col space-y-2">
             <div className="flex flex-col space-y-3 pt-6">
               <h4 className="font-medium">Other Alerts</h4>
-              <nav className="flex gap-2 items-center">
+              <nav className="flex items-center gap-2">
                 <a href={SG_ALERTS_URL}>
                   <span className="mr-1">🇸🇬</span>{" "}
                   <abbr title="Singapore" className="no-underline">

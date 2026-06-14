@@ -11,7 +11,9 @@ Minimal instructions for AI coding agents working in this repository.
 
 - Install dependencies: `yarn install`
 - Start dev server: `yarn dev` (runs on port `3001`)
-- Lint: `yarn lint`
+- Lint: `yarn lint` (Next.js ESLint)
+- Test: `yarn test` (Jest)
+- Test watch mode: `yarn test:watch`
 - Production build: `yarn build`
 
 ## Architecture
@@ -51,8 +53,9 @@ Category pages that mix Telegram and email use the `PageSeparator` component bet
 
 - Prefer existing `components/ui/*` primitives and current Tailwind utility patterns before adding new abstractions.
 - Keep styling in Tailwind classes. Variant-heavy reusable components should follow the existing `class-variance-authority` pattern.
-- Follow the ESLint rules in `.eslintrc.json`: use `async`/`await` instead of `.then()`/`.catch()`, avoid nested ternaries, prefer object shorthand, prefer `const`, and keep `console` usage to `console.warn` or `console.error`.
+- Follow the ESLint rules in `.eslintrc.json`: use `async`/`await` instead of `.then()`/`.catch()`, avoid nested ternaries, prefer object shorthand, prefer `const`, keep `console` usage to `console.warn` or `console.error`, and keep files Prettier-clean because formatting violations fail lint.
 - Preserve the current font/theme setup in `app/layout.tsx` and token-based Tailwind config in `tailwind.config.ts`.
+- Route-level pages use lightweight Jest render tests alongside the page file (`page.test.tsx`). When adding a new route, add or update the matching test.
 
 ## Static Export Constraints
 
@@ -66,5 +69,6 @@ Category pages that mix Telegram and email use the `PageSeparator` component bet
 - **Adding a new email-only topic:** add the `SubscriptionTopic` enum value in `lib/enums.ts`, add the `NotificationSetting` entry to `NOTIFICATION_SETTINGS` in `lib/content.tsx`, and add it to the relevant `*_NOTIFICATION_SETTINGS` constant for its category page.
 - **Adding a new Telegram topic:** add the `TelegramChannel` enum value in `lib/enums.ts`, add a `TopicTitle` enum entry, add a `TelegramPublicChannel` entry to the relevant `*_TELEGRAM_CHANNELS` constant in `lib/content.tsx`, and add a `TelegramLinkButton` to the topic page. If the category page is currently email-only, also add a `TelegramChannels` section with a `PageSeparator` between it and the `SubscribeForm`.
 - **Adding a new category:** add the route to `Routes` in `lib/enums.ts`, add the card to `CATEGORY_ITEMS` in `lib/content.tsx`, create the category page under `app/categories/`, and add the relevant `*_NOTIFICATION_SETTINGS` and/or `*_TELEGRAM_CHANNELS` constants.
+- New route pages should usually come with a matching `page.test.tsx` so the PR workflow continues to cover render-level regressions.
 - The Travel category uses a split approach: `TRAVEL_TELEGRAM_CHANNELS` feeds the `TelegramChannels` section, and `TRAVEL_NOTIFICATION_SETTINGS` (filtered from `NOTIFICATION_SETTINGS`) feeds the `SubscribeForm` section. Keep these two lists in sync when adding travel topics.
 - `NEW_FEATURES_NOTIFICATION_SETTING` is automatically appended by `SubscribeForm` when `defaultTopics` is provided — do not include it manually in any `*_NOTIFICATION_SETTINGS` array.

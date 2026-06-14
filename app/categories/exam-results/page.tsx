@@ -8,7 +8,7 @@ import { Routes } from "@/lib/enums";
 import { META_OPEN_GRAPH, META_TWITTER } from "@/app/shared-metadata";
 import { EXAM_RESULTS_NOTIFICATION_SETTINGS } from "@/lib/content";
 
-const title = "Exam Results in Philippines";
+const title = "Exam Results in the Philippines";
 const description =
   "Subscribe to get notified about exam results in the Philippines such as PRC licensure exam results.";
 const url = Routes.ExamResultsCategory;
