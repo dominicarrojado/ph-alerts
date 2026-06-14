@@ -4,6 +4,8 @@ export enum Routes {
   Settings = "/settings/",
   About = "/about/",
   HowItWorks = "/how-it-works/",
+  TravelCategory = "/categories/travel/",
+  ExamResultsCategory = "/categories/exam-results/",
   CebuPacificFlights = "/topics/cebu-pacific-flights/",
   JetstarFlights = "/topics/jetstar-flights/",
 }
@@ -40,6 +42,10 @@ export enum SubscriptionTopic {
 export enum GoogleAnalyticsEvent {
   SUBSCRIBE_FORM_SUBMIT = "subscribe_form_submit",
   UNSUBSCRIBE_FORM_SUBMIT = "unsubscribe_form_submit",
+  TOPIC_CLICK = "topic_click",
+  TOAST_OPEN = "toast_open",
+  TOAST_CLOSE = "toast_close",
+  TOAST_CLICK = "toast_click",
 }
 
 export enum FlightAirline {
@@ -50,4 +56,12 @@ export enum FlightAirline {
 export enum Currency {
   SGD = "SGD",
   PHP = "PHP",
+}
+
+export enum TelegramChannel {
+  CebuPacificFlights = "PHAlertsCebuPacificFlights",
+}
+
+export enum TopicTitle {
+  CebuPacificFlights = "✈️ Flight Prices (Cebu Pacific)",
 }

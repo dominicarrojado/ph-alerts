@@ -1,19 +1,25 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import React from "react";
 import { Container } from "@/components/ui/container";
-import { Button } from "@/components/ui/button";
 import Heading from "@/components/ui/heading";
 import Subheading from "@/components/ui/subheading";
 import Paragraph from "@/components/ui/paragraph";
-import { Currency, FlightAirline, Routes } from "@/lib/enums";
+import TelegramLinkButton from "@/components/telegram-link-button";
+import {
+  Currency,
+  FlightAirline,
+  Routes,
+  TelegramChannel,
+  TopicTitle,
+} from "@/lib/enums";
 import { META_OPEN_GRAPH, META_TWITTER } from "@/app/shared-metadata";
 import { FlightsTable } from "@/components/flights-table";
 import { Anchor } from "@/components/ui/anchor";
 
 const title = "Cebu Pacific Flights";
 const description =
-  "Subscribe to PH Alerts to get notified when flight prices goes down for Cebu Pacific flights departing from the Philippines.";
+  "Subscribe to PH Alerts to get notified when there's Piso Sale for Cebu Pacific flights departing from the Philippines.";
+
 const url = Routes.CebuPacificFlights;
 
 export const metadata: Metadata = {
@@ -69,20 +75,20 @@ export default function CebuPacificFlights() {
       </Paragraph>
       <Paragraph>
         <span className="font-medium">PH Alerts</span> is a free notification
-        service that sends you an email when the prices go down for Cebu Pacific
-        flights departing from the Philippines. Be the first to know when the
-        Piso Sale is on so that you can take advantage of the lower prices.
+        service that monitors the Cebu Pacific flight promotions from the
+        Philippines. We will notify you when the prices go down so that you can
+        take advantage of the lower prices.
       </Paragraph>
       <Paragraph>
-        To get started, simply click the button below to head over to the
-        subscription page. Once there, you can select{" "}
-        <span className="font-medium">Flight Prices (Cebu Pacific)</span> as one
-        of the topics you want to subscribe to.
+        To get started, simply click the button below to join the Telegram
+        channel and start receiving notifications.
       </Paragraph>
-      <div className="mt-8 text-center">
-        <Link href={Routes.Home}>
-          <Button variant="secondary">Subscribe Now</Button>
-        </Link>
+      <div className="sticky bottom-6 z-50 mt-8 text-center">
+        <TelegramLinkButton
+          channel={TelegramChannel.CebuPacificFlights}
+          linkText="Subscribe Now"
+          topicTitle={TopicTitle.CebuPacificFlights}
+        />
       </div>
     </Container>
   );

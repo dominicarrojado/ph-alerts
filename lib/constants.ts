@@ -23,3 +23,9 @@ export const ROUTES_WITH_NO_TITLE = [
   Routes.Subscribe,
   Routes.Settings,
 ];
+
+export const TELEGRAM_SHORT_URL = "https://t.me";
+
+export const SUBSCRIBE_FORM_ID = "subscribe-form";
+
+export const TOAST_DURATION = 60000; // 1 minute

@@ -1,5 +1,10 @@
 import { ReactNode } from "react";
-import { GoogleAnalyticsEvent, Routes, SubscriptionTopic } from "./enums";
+import {
+  GoogleAnalyticsEvent,
+  Routes,
+  SubscriptionTopic,
+  TelegramChannel,
+} from "./enums";
 
 export type SubscriptionTopics = Array<SubscriptionTopic>;
 export type Subscription = {
@@ -8,6 +13,14 @@ export type Subscription = {
   };
   topics: SubscriptionTopics;
 };
+
+export type TelegramPublicChannel = {
+  id: TelegramChannel;
+  title: string;
+  description: ReactNode;
+  topicRoute?: Routes;
+};
+export type TelegramPublicChannels = Array<TelegramPublicChannel>;
 
 export type NotificationSetting = {
   id: SubscriptionTopic;
@@ -24,6 +37,31 @@ export type EventSubscribeFormSubmit = {
 
 export type EventUnsubscribeFormSubmit = {
   event: GoogleAnalyticsEvent.UNSUBSCRIBE_FORM_SUBMIT;
+  buttonText: string;
+};
+
+export type EventTopicClick = {
+  event: GoogleAnalyticsEvent.TOPIC_CLICK;
+  topicTitle: string;
+  linkText?: string;
+  linkUrl: string;
+};
+
+export type EventToastOpen = {
+  event: GoogleAnalyticsEvent.TOAST_OPEN;
+  toastTitle: string;
+  buttonText: string;
+};
+
+export type EventToastClose = {
+  event: GoogleAnalyticsEvent.TOAST_CLOSE;
+  toastTitle: string;
+  buttonText: string;
+};
+
+export type EventToastClick = {
+  event: GoogleAnalyticsEvent.TOAST_CLICK;
+  toastTitle: string;
   buttonText: string;
 };
 

@@ -1,6 +1,13 @@
 import { SITE_NAME } from "./constants";
 import { checkIsLocalhost } from "./location";
-import { EventSubscribeFormSubmit, EventUnsubscribeFormSubmit } from "./types";
+import {
+  EventSubscribeFormSubmit,
+  EventUnsubscribeFormSubmit,
+  EventTopicClick,
+  EventToastOpen,
+  EventToastClose,
+  EventToastClick,
+} from "./types";
 
 declare global {
   interface Window {
@@ -9,7 +16,13 @@ declare global {
 }
 
 export function trackEvent(
-  data: EventSubscribeFormSubmit | EventUnsubscribeFormSubmit
+  data:
+    | EventSubscribeFormSubmit
+    | EventUnsubscribeFormSubmit
+    | EventTopicClick
+    | EventToastOpen
+    | EventToastClose
+    | EventToastClick,
 ) {
   if (checkIsLocalhost()) {
     return;
